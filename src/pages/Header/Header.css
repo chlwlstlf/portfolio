@@ -1,0 +1,40 @@
+.menu {
+  width: 100vw;
+  background: linear-gradient(to left, rgb(255, 166, 166), rgb(126, 197, 255));
+  height: 3rem;
+}
+
+.menu-item {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  width: 20%;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease-in-out 0.5s;
+  z-index: 999;
+  background-color: white;
+  opacity: 0.3;
+}
+.menu-item a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display:block;
+}
+.menu-item:hover{
+  opacity: 0.5;
+}
+.menu-item:hover .menu{
+  opacity: 1;
+}
+.menu-item:hover a{
+  color: rgb(0, 0, 0);
+  z-index: 999;
+  transition: all ease-in-out 0.5s;
+}
+
+
+.menu-item a:visited {
+  border: rgba(0,0,0);
+}
