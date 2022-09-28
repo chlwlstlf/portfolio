@@ -1,20 +1,90 @@
 .aboutme{
   text-align: center;
+  padding-top:9rem;
 }
 
-.title1{
+.box {
+  width: 100vw;
+  height: 80vh;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px rgba(black, .2);
+  background: lighten(#f0f4c3, 10%);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave {
+  opacity: .4;
+  position: absolute;
+  top: 100%;
+  left: -30%;
+  background: #0af;
+  width: 3000px;
+  height: 3000px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 100%;
+  animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .1;
+  background: rgb(206, 28, 28);
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 50vh;
+  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+.title{
   font-size: 3rem;
   border-bottom: 0.5rem solid #aed3f7;
+}
+
+.blink {
+  animation: blink 1s infinite;
+  font-size: 2rem;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  51% { opacity: 1; }
+  100% { opacity: 1; }
 }
 
 .container {
   display: flex;
   width : 80vw;
+  text-align: left;
 	flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;;
   -webkit-box-pack: justify;
+  align-items: center;
+  align-content: center;
+  margin:auto;
 }
 .item {
-  width : 50%;
+  width : 500px;
   font-size: 1.5rem;
 }

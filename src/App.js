@@ -60,7 +60,7 @@ const App = () => {
           setScrollIndex(5);
         } else {
           // 현재 5페이지
-          console.log("현재 3페이지, down");
+          console.log("현재 5페이지, down");
           outerDivRef.current.scrollTo({
             top: pageHeight * 5 + DIVIDER_HEIGHT * 5,
             left: 0,
@@ -108,7 +108,7 @@ const App = () => {
           setScrollIndex(3);
         } else {
           // 현재 5페이지
-          console.log("현재 3페이지, up");
+          console.log("현재 5페이지, up");
           outerDivRef.current.scrollTo({
             top: pageHeight * 3 + DIVIDER_HEIGHT * 3,
             left: 0,
@@ -124,31 +124,33 @@ const App = () => {
       outerDivRefCurrent.removeEventListener("wheel", wheelHandler);
     };
   }, []);
+
   return (
-    <div ref={outerDivRef} className="outer">
-      <Header scrollIndex={scrollIndex}/>
-      <div className="contents">
-        <section id="AboutMe" className="inner">
-          <AboutMe />
-        </section>
-        <div className="divider"></div>
-        <section id="Skills" className="inner">
-          <Skills />
-        </section>
-        <div className="divider"></div>
-        <section id="Archiving" className="inner">
-          <Archiving />
-        </section>
-        <div className="divider"></div>
-        <section id="Projects" className="inner">
-          <Projects />
-        </section>
-        <div className="divider"></div>
-        <section id="Career" className="inner">
-          <Career />
-        </section>
+    <div>
+      <Header />
+      <div ref={outerDivRef} className="outer">
+        <div className="contents">
+          <section id="AboutMe" className="inner">
+            <AboutMe />
+          </section>
+          <div className="divider"></div>
+          <section id="Skills" className="inner">
+            <Skills />
+          </section>
+          <div className="divider"></div>
+          <section id="Archiving" className="inner">
+            <Archiving />
+          </section>
+          <div className="divider"></div>
+          <section id="Projects" className="inner">
+            <Projects />
+          </section>
+          <div className="divider"></div>
+          <section id="Career" className="inner">
+            <Career />
+          </section>
+        </div>        
       </div>
-      
     </div>
   );
 };

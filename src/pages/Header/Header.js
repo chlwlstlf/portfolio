@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 
-const Header = ({ scrollIndex }) => {
+const Header = () => {
   return (
     <div style={{position:'fixed'}}>
       <nav className="menu">
